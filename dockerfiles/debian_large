@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y upgrade && \
 	python3-jinja2 python3-numpy python3-pandas python3-pip python3-scipy \
 	python3-six python3-yaml readline-common rsyslog ruby sensible-utils \
 	ssh systemd systemd-sysv tasksel tasksel-data udev vim wget whiptail \
-	xxd iptables isc-dhcp-client isc-dhcp-common kmod less netcat-openbsd openjdk-11-jdk
+	xxd iptables isc-dhcp-client isc-dhcp-common kmod less netcat-openbsd openjdk-11-jdk-headless
 
 #RUN wget http://ftp.de.debian.org/debian/pool/main/o/openjdk-17/openjdk-17-jdk_17.0.8~6-4_i386.deb && apt -f install ./openjdk-17-jdk_17.0.8~6-4_i386.deb
 
