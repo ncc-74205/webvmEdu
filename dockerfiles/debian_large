@@ -11,6 +11,8 @@ RUN apt-get update && apt-get -y upgrade && \
 	ssh systemd systemd-sysv tasksel tasksel-data udev vim wget whiptail \
 	xxd iptables isc-dhcp-client isc-dhcp-common kmod less netcat-openbsd
 
+RUN wget http://ftp.de.debian.org/debian/pool/main/o/openjdk-17/openjdk-17-jdk_17.0.8~6-4_i386.deb && dpkg -i openjdk-17-jdk_17.0.8~6-4_i386.deb
+
 # Make a user, then copy over the /example directory
 RUN useradd -m user && echo "user:password" | chpasswd
 COPY --chown=user:user ./examples /home/user/examples
